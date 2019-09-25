@@ -1,0 +1,44 @@
+<!--
+ - Created by rsieve on 2019-09-11.
+ -->
+
+<!-- Line Editor -->
+<template>
+
+    <lightning-card>
+
+        <template if:true={quote}>
+
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_2-of-12">
+                    <span><c-line-editor-header quote={quote} ></c-line-editor-header></span>
+                </div>
+                <div class="slds-col slds-size_10-of-12 slds-align_absolute-center slds-float_right">
+                    <span><c-button-bar quote={quote} ></c-button-bar></span>
+                </div>
+            </div>
+
+
+
+
+            <p class="slds-p-horizontal_small">
+
+                <c-quote-field-editor quote={quote} onstatechange={handleStateChange}></c-quote-field-editor>
+
+                <template if:true={quoteLineItems}>
+                    <c-line-editor-grid quote={quote} quote-line-items={quoteLineItems} columns={columns} oncellstatechange={handleStateChange}></c-line-editor-grid>
+                </template>
+<!--                Card Body (custom component)-->
+            </p>
+
+
+            <div slot="footer">
+
+            </div>
+
+        </template>
+
+
+    </lightning-card>
+
+</template>

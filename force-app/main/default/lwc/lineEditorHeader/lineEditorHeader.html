@@ -1,0 +1,20 @@
+<!--
+ - Created by rsieve on 2019-09-12.
+ -->
+
+<!-- Line Editor Header -->
+<template>
+
+        <div class="slds-m-top_medium slds-m-bottom_x-large">
+            <div class="slds-p-around_medium lgc-bg">
+                <lightning-tile label={quote.fields.QuoteNumber.value} type="media">
+                    <lightning-icon slot="media" icon-name="standard:quotes"></lightning-icon>
+                    <p class="slds-truncate" title="Total Lines"> {quote.fields.LineItemCount.value} lines</p>
+                    <p class="slds-truncate" title="Total Price"> {quote.fields.TotalPrice.displayValue}</p>
+                    <p class="slds-truncate" title="Quote Name"> {quote.fields.Name.value}</p>
+                </lightning-tile>
+            </div>
+        </div>
+
+
+</template>

@@ -1,0 +1,19 @@
+<!--
+ - Created by rsieve on 2019-09-23.
+ -->
+
+<!-- Cpq Quote Summary -->
+<template>
+
+    <div class="slds-m-top_medium slds-m-bottom_x-large">
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-tile label={quote.QuoteNumber} type="media">
+                <lightning-icon slot="media" icon-name="standard:quotes"></lightning-icon>
+                <p><lightning-formatted-number value={quote.LineItemCount} maximum-fraction-digits="0"></lightning-formatted-number> lines</p>
+                <p><lightning-formatted-number value={quote.TotalPrice} format-style="currency" currency-code={quote.CurrencyIsoCode}></lightning-formatted-number></p>
+                <p><lightning-formatted-text value={quote.Name}></lightning-formatted-text></p>
+            </lightning-tile>
+        </div>
+    </div>
+
+</template>

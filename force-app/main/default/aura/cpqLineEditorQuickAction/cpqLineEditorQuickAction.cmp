@@ -1,0 +1,7 @@
+<!--
+ - Created by rsieve on 2019-09-24.
+ -->
+
+<aura:component description="cpqLineEditorQuickAction" implements="force:lightningQuickAction,force:hasRecordId,force:hasSobjectName">
+    <aura:handler name="init" value="{!this}" action="{!c.navigateToMyComponent }"/>
+</aura:component>

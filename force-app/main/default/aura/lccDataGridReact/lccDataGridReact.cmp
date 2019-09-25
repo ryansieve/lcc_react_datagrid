@@ -1,0 +1,21 @@
+<!--
+ - Created by rsieve on 2019-09-19.
+ -->
+
+<aura:component description="lccDataGridReact" controller="ReactDataGridCon" implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global" >
+    <aura:method name="lineInit" action="{!c.initQuoteLines}">
+        <aura:attribute name="qlis" type="Object" />
+    </aura:method>
+    <aura:registerEvent name="gridEvent" type="c:gridEvent"/>
+
+    <aura:attribute name="quoteLineItems" type="Object[]" access="global" />
+
+    <lightning:card title="LCC DataGrid React">
+
+        <lightning:container aura:id="jsApp" src="{!$Resource.lcc_datagrid_react + '/index.html'}"
+                             onmessage="{!c.handleMessage}"
+                             onerror="{!c.handleError}"/>
+
+    </lightning:card>
+
+</aura:component>

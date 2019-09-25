@@ -1,0 +1,47 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/buttonBar": [
+                "buttonBar/buttonBar.js"
+            ],
+            "c/cpqQuoteSummary": [
+                "cpqQuoteSummary/cpqQuoteSummary.js"
+            ],
+            "c/lineEditor": [
+                "lineEditor/lineEditor.js"
+            ],
+            "c/lineEditorGrid": [
+                "lineEditorGrid/lineEditorGrid.js"
+            ],
+            "c/lineEditorHeader": [
+                "lineEditorHeader/lineEditorHeader.js"
+            ],
+            "c/quoteFieldEditor": [
+                "quoteFieldEditor/quoteFieldEditor.js"
+            ],
+            "c/quoteHandler": [
+                "quoteHandler/quoteHandler.js"
+            ],
+            "c/quoteLineHandler": [
+                "quoteLineHandler/quoteLineHandler.js"
+            ],
+            "c/recordEditModal": [
+                "recordEditModal/recordEditModal.js"
+            ],
+            "c/uuid": [
+                "uuid/uuid.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

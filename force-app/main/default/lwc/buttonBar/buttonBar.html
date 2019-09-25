@@ -1,0 +1,24 @@
+<!--
+ - Created by rsieve on 2019-09-11.
+ -->
+
+<!-- Button Bar -->
+<template>
+    <div class="slds-clearfix">
+        <div class="slds-float_right">
+            <lightning-button-group>
+
+                <lightning-button label="Add Product" icon-name="utility:add"></lightning-button>
+                <lightning-button label="Calculate" icon-name="utility:number_input"></lightning-button>
+                <lightning-button label="Quick Save" icon-name="utility:save" onclick={handleQuickSave}></lightning-button>
+                <lightning-button label="Delete" icon-name="utility:delete"></lightning-button>
+                <lightning-button label="Request IB" icon-name="utility:process"></lightning-button>
+                <lightning-button label="Goal Seek" icon-name="action:goal"></lightning-button>
+                <lightning-button label="Cancel" icon-name="action:close" onclick={handleCancel}></lightning-button>
+
+            </lightning-button-group>
+
+        </div>
+    </div>
+
+</template>

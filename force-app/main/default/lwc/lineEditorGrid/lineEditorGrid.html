@@ -1,0 +1,18 @@
+<!--
+ - Created by rsieve on 2019-09-13.
+ -->
+
+<!-- Line Editor Grid -->
+<template>
+
+    <lightning-datatable
+            key-field="ExtId__c"
+            data={quoteLineItems}
+            show-row-number-column
+            row-number-offset={rowOffset}
+            suppress-bottom-bar
+            columns={columns}
+            oncellchange={handleCellChange}>
+    </lightning-datatable>
+
+</template>

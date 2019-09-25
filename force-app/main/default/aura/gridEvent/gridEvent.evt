@@ -1,0 +1,8 @@
+<!--
+ - Created by rsieve on 2019-09-24.
+ -->
+
+<aura:event type="COMPONENT" description="gridEvent">
+    <aura:attribute name="sObjectName" type="String"/>
+    <aura:attribute name="row" type="Object"/>
+</aura:event>

@@ -1,0 +1,45 @@
+<!--
+ - Created by rsieve on 2019-09-23.
+ -->
+
+<aura:component description="cpqLineEditor" controller="LineEditorCon" implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global" >
+
+    <aura:attribute name="renderQuote" type="Boolean" default="false" />
+    <aura:attribute name="quote" type="Object" />
+    <aura:attribute name="quoteLineItems" type="Object[]" />
+    <aura:attribute name="mQuoteLineItems" type="Object" />
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:handler name="gridEvent" event="c:gridEvent" action="{!c.handleStateChange}"/>
+
+    <lightning:card>
+
+        <aura:if isTrue="{!v.renderQuote}">
+
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_2-of-12">
+                    <span><c:cpqQuoteSummary quote="{!v.quote}"/></span>
+                </div>
+                <div class="slds-col slds-size_10-of-12 slds-align_absolute-center slds-float_right">
+                    <span><c:buttonBar quote="{!v.quote}" /></span>
+                </div>
+            </div>
+
+            <p class="slds-p-horizontal_small">
+
+                <c:quoteFieldEditor quote="{!v.quote}" onstatechange="{!c.handleStateChange}"/>
+
+                <c:lccDataGridReact quoteLineItems="{!v.quoteLineItems}" aura:id="lccDataGridReact"/>
+
+            </p>
+
+            <aura:set attribute="else">
+                <div class="slds-align_absolute-center backgroundInverse">
+                    <lightning:spinner alternativeText="Loading" size="small" />
+                </div>
+            </aura:set>
+
+        </aura:if>
+
+    </lightning:card>
+
+</aura:component>
