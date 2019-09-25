@@ -20,7 +20,7 @@
                     <span><c:cpqQuoteSummary quote="{!v.quote}"/></span>
                 </div>
                 <div class="slds-col slds-size_10-of-12 slds-align_absolute-center slds-float_right">
-                    <span><c:buttonBar quote="{!v.quote}" /></span>
+                    <span><c:cpqButtonBar quote="{!v.quote}" /></span>
                 </div>
             </div>
 

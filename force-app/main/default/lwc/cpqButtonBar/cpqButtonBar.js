@@ -1,18 +1,17 @@
 /**
- * Created by rsieve on 2019-09-11.
+ * Created by rsieve on 2019-09-25.
  */
 
 import {LightningElement, api} from 'lwc';
 import { NavigationMixin } from 'lightning/navigation';
 
-export default class ButtonBar extends NavigationMixin(LightningElement) {
+export default class CpqButtonBar extends NavigationMixin(LightningElement) {
 
     @api quote
-    quoteUrl
     //todo - make choices about which buttons to show based on the quote and line details
 
     handleQuickSave(event){
-        debugger
+    debugger
         console.log('quote save', this.quote.details)
     }
 
