@@ -51,7 +51,35 @@
         "Product2": {
           "Name": "SLA: Bronze",
           "Id": "01t1F000004vxmwQAA"
-        }
+        },
+        "_children": [
+          {
+            "Id": "0QL1F000000HIemWAG",
+            "IsDeleted": false,
+            "LineNumber": "00000011",
+            "CurrencyIsoCode": "USD",
+            "CreatedDate": "2019-09-23T15:38:56.000Z",
+            "CreatedById": "0051F000004KpnFQAS",
+            "LastModifiedDate": "2019-09-23T15:38:56.000Z",
+            "LastModifiedById": "0051F000004KpnFQAS",
+            "SystemModstamp": "2019-09-23T15:38:56.000Z",
+            "LastViewedDate": "2019-09-23T15:38:56.000Z",
+            "LastReferencedDate": "2019-09-23T15:38:56.000Z",
+            "QuoteId": "0Q01F000000GtPYSA0",
+            "PricebookEntryId": "01u1F00000IOc92QAD",
+            "Quantity": 4,
+            "UnitPrice": 20000,
+            "Product2Id": "01t1F000004vxn1QAA",
+            "ListPrice": 20000,
+            "Subtotal": 80000,
+            "TotalPrice": 80000,
+            "Product2Name": "Installation: Industrial - Low",
+            "Product2": {
+              "Name": "Installation: Industrial - Low",
+              "Id": "01t1F000004vxn1QAA"
+            }
+          }
+        ]
       }
     ]
   },
@@ -235,32 +263,6 @@
     "Product2": {
       "Name": "GenWatt Propane 1500kW",
       "Id": "01t1F000004vxmuQAA"
-    }
-  },
-  {
-    "Id": "0QL1F000000HIemWAG",
-    "IsDeleted": false,
-    "LineNumber": "00000011",
-    "CurrencyIsoCode": "USD",
-    "CreatedDate": "2019-09-23T15:38:56.000Z",
-    "CreatedById": "0051F000004KpnFQAS",
-    "LastModifiedDate": "2019-09-23T15:38:56.000Z",
-    "LastModifiedById": "0051F000004KpnFQAS",
-    "SystemModstamp": "2019-09-23T15:38:56.000Z",
-    "LastViewedDate": "2019-09-23T15:38:56.000Z",
-    "LastReferencedDate": "2019-09-23T15:38:56.000Z",
-    "QuoteId": "0Q01F000000GtPYSA0",
-    "PricebookEntryId": "01u1F00000IOc92QAD",
-    "Quantity": 4,
-    "UnitPrice": 20000,
-    "Product2Id": "01t1F000004vxn1QAA",
-    "ListPrice": 20000,
-    "Subtotal": 80000,
-    "TotalPrice": 80000,
-    "Product2Name": "Installation: Industrial - Low",
-    "Product2": {
-      "Name": "Installation: Industrial - Low",
-      "Id": "01t1F000004vxn1QAA"
     }
   },
   {
