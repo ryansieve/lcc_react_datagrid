@@ -1,11 +1,10 @@
 /**
- * Created by rsieve on 2019-09-12.
+ * Created by rsieve on 2019-09-25.
  */
 
 import {LightningElement, api} from 'lwc';
 
-export default class QuoteFieldEditor extends LightningElement {
-
+export default class CpqQuoteFieldEditor extends LightningElement {
     //todo - inherit order and editability of which fields to show in the editor
     @api fields = [
         {
@@ -34,14 +33,14 @@ export default class QuoteFieldEditor extends LightningElement {
     }
 
     handleChange(event){
-        debugger
+    debugger
         const stateChangeEvent = new CustomEvent('statechange', {
-                detail:{
-                    fieldName: event.srcElement.fieldName,
-                    sObjectName: 'Quote',
-                    value: event.detail.value
-                }
-            });
+            detail:{
+                fieldName: event.srcElement.fieldName,
+                sObjectName: 'Quote',
+                value: event.detail.value
+            }
+        });
         this.dispatchEvent(stateChangeEvent)
 
     }

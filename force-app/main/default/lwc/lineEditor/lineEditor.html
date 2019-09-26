@@ -23,7 +23,7 @@
 
             <p class="slds-p-horizontal_small">
 
-                <c-quote-field-editor quote={quote} onstatechange={handleStateChange}></c-quote-field-editor>
+                <c-cpq-quote-field-editor quote={quote} onstatechange={handleStateChange}></c-cpq-quote-field-editor>
 
                 <template if:true={quoteLineItems}>
                     <c-line-editor-grid quote={quote} quote-line-items={quoteLineItems} columns={columns} oncellstatechange={handleStateChange}></c-line-editor-grid>
