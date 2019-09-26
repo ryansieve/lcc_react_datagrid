@@ -74,7 +74,7 @@ class App extends React.Component {
             for (let i = fromRow; i <= toRow; i++) {
                 rows[i] = { ...rows[i], ...updated };
                 if(updated.hasOwnProperty('Quantity')){
-                    rows[i].TotalPrice = rows[i].Quantity * rows[i].ListPrice
+                    rows[i].TotalPrice = rows[i].Quantity * rows[i].UnitPrice
                 }
                 console.log('line state change', rows[i])
                 //Send the changed row data back to the host Lightning Container Component
