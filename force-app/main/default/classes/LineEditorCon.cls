@@ -27,6 +27,7 @@ public with sharing class LineEditorCon {
         query += string.join(fields, ',');
         query += ' FROM QuoteLineItem';
         query += ' WHERE QuoteId = \'' + quoteId + '\'';
+        query += ' ORDER BY LineNumber';
         system.debug(query);
         return (List<QuoteLineItem>)Database.query(query);
     }
