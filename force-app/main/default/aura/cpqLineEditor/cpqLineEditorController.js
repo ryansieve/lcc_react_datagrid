@@ -22,7 +22,10 @@
     },
 
     handleStateChange: function(component, event, helper){
-        //debugger
+
+        //EXAMPLE INVOKE SERVICE COMPONENT
+        var svcs = component.find('quoteUtils');
+
         var sObjectName = event.getParam('sObjectName')
         if(sObjectName == 'Quote'){
             var quote = component.get('v.quote');
@@ -33,13 +36,22 @@
             var quoteLine = event.getParam('row')
             var quote = component.get('v.quote');
             var mQuoteLineItems = component.get('v.mQuoteLineItems');
+
             if(mQuoteLineItems.hasOwnProperty(quoteLine.Id)){
                 var prevTotalPrice = mQuoteLineItems[quoteLine.Id].TotalPrice;
                 var diff = quoteLine.TotalPrice - prevTotalPrice;
                 quote.TotalPrice += diff;
+
+
+                svcs.beforeCalculate(quote, Object.values(mQuoteLineItems));
+
+                svcs.afterCalculate(quote, Object.values(mQuoteLineItems));
+
                 component.set('v.quote', quote);
                 component.set('v.mQuoteLineItems', mQuoteLineItems);
                 component.set('v.quoteLineItems', Object.values(mQuoteLineItems));
+
+
             }
         }
     }
